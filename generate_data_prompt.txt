@@ -1,0 +1,44 @@
+Generate synthetic e-commerce datasets for me. I need 5 separate CSV files with the following schema:
+
+1) customers.csv:
+   - customer_id
+   - customer_name
+   - email
+   - signup_date
+   - city
+
+2) products.csv:
+   - product_id
+   - product_name
+   - category
+   - price
+
+3) orders.csv:
+   - order_id
+   - customer_id
+   - order_date
+   - total_amount
+
+4) order_items.csv:
+   - order_item_id
+   - order_id
+   - product_id
+   - quantity
+   - unit_price
+
+5) payments.csv:
+   - payment_id
+   - order_id
+   - payment_date
+   - payment_method
+   - amount
+   - status
+
+Generate around:
+- 50 customers
+- 40 products
+- 200 orders
+- 300–400 order_items
+- payments for each order
+
+Output the **full CSV content** for each file so that I can directly copy and save them into separate CSV files.
