@@ -1,19 +1,19 @@
-Cursor Ecom Exercise
+# 📦 Cursor Ecom Exercise
 
-This project was built using Cursor IDE as part of the A-SDLC exercise.
+This project was built using **Cursor IDE** as part of the A-SDLC exercise.
+
 It demonstrates the full workflow of:
 
-Generating synthetic e-commerce data
+- Generating synthetic e-commerce data  
+- Loading it into a SQLite database  
+- Running SQL joins and analytical queries  
+- Exporting outputs  
+- Pushing the entire project to GitHub  
 
-Loading it into a SQLite database
+---
 
-Running SQL joins and analytical queries
+## 📂 Project Structure
 
-Exporting outputs
-
-Pushing the entire project to GitHub
-
-📂 Project Structure
 cursor-ecom-exercise/
 │
 ├── customers.csv
@@ -34,41 +34,43 @@ cursor-ecom-exercise/
 ├── README.md
 └── .gitignore
 
-🧩 Step 1 — Generate Synthetic Data
+yaml
+Copy code
 
-Using Cursor IDE prompts, five datasets were generated:
+---
 
-customers.csv
+## 🧩 Step 1 — Generate Synthetic Data
 
-products.csv
+Using Cursor IDE prompts, five datasets were created:
 
-orders.csv
+- `customers.csv` – customer details  
+- `products.csv` – product catalog  
+- `orders.csv` – customer orders  
+- `order_items.csv` – individual order items  
+- `payments.csv` – payment transactions  
 
-order_items.csv
+These simulate a small e-commerce system with customers, orders, items and payments.
 
-payments.csv
+---
 
-These files simulate a small e-commerce system with customers, orders, items, and payments.
+## 🗄️ Step 2 — Load Data into SQLite
 
-🗄️ Step 2 — Load Data into SQLite
+The script `load_data.py`:
 
-The script load_data.py:
-
-Creates ecommerce.db
-
-Creates all tables
-
-Loads the CSV files into the DB
-
-Prints a summary of row counts
+- Creates `ecommerce.db`  
+- Creates all tables  
+- Loads all CSV data into SQLite  
+- Prints a summary of row counts  
 
 Run:
 
+```bash
 python load_data.py
+
 
 🧮 Step 3 — SQL Queries & Joins
 
-All SQL queries are stored in queries.sql, including:
+All analytical queries are in queries.sql, including:
 
 Revenue per customer
 
@@ -76,9 +78,9 @@ Top products by revenue
 
 Monthly revenue
 
-Joins across orders, customers, items, and products
+Joins across customers, products, orders, items, and payments
 
-To run queries and export results:
+To execute queries and export results:
 
 python run_queries.py
 
@@ -93,14 +95,14 @@ monthly_revenue.csv
 
 🔗 Step 4 — GitHub Integration
 
-The full project was pushed to GitHub using:
+The project was pushed to GitHub using:
 
 git add .
 git commit -m "Upload project"
 git push origin main
 
 
-A .gitignore file excludes the SQLite file:
+A .gitignore entry is used to exclude the SQLite database file:
 
 ecommerce.db
 
@@ -117,27 +119,27 @@ Install dependencies:
 pip install pandas
 
 
-Load the CSV data:
+Load the data:
 
 python load_data.py
 
 
-Run analytics:
+Run queries:
 
 python run_queries.py
 
 📊 Outputs Generated
 1️⃣ Revenue per Customer
 
-Total spent by each customer
+Total spent
 
 Number of orders
 
-Sorted by highest spend
+Sorted by highest spender
 
 2️⃣ Top Products
 
-Products with highest revenue
+Highest revenue products
 
 Total revenue
 
@@ -145,16 +147,16 @@ Units sold
 
 3️⃣ Monthly Revenue
 
-Revenue grouped per month
+Revenue grouped by month
 
-Shows sales pattern
+Shows monthly performance trends
 
 🛠️ Tools Used
 
 Cursor IDE
 
-Python (pandas, sqlite3)
-
 SQLite
+
+Python (pandas, sqlite3)
 
 Git & GitHub
